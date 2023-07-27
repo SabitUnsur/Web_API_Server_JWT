@@ -1,0 +1,12 @@
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\bin\Debug\net7.0\AuthServer.Core.deps.json
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\bin\Debug\net7.0\AuthServer.Core.dll
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\bin\Debug\net7.0\AuthServer.Core.pdb
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\obj\Debug\net7.0\AuthServer.Core.csproj.AssemblyReference.cache
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\obj\Debug\net7.0\AuthServer.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\obj\Debug\net7.0\AuthServer.Core.AssemblyInfoInputs.cache
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\obj\Debug\net7.0\AuthServer.Core.AssemblyInfo.cs
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\obj\Debug\net7.0\AuthServer.Core.csproj.CoreCompileInputs.cache
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\obj\Debug\net7.0\AuthServer.Core.dll
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\obj\Debug\net7.0\refint\AuthServer.Core.dll
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\obj\Debug\net7.0\AuthServer.Core.pdb
+C:\Users\sabit\source\repos\AuthService.API\AuthServer.Core\obj\Debug\net7.0\ref\AuthServer.Core.dll
