@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cck/uoTo7bNVYK4lc98Nvkgj1PWwsityu2ZvLS7lwM/wIpcB+vVSaSPxvWHh7wVum6g/ZiPBInBBI5inOLahyQ==",
+  "dgSpecHash": "5mvDEN/dt74kxFGjEV0NViZa4kvGSb/vTEtC9fkVQGSop+YDeRPtK4XHlsbGni7+ImJLa/znXLSAOFOs3iDbIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sabit\\source\\repos\\AuthService.API\\MiniApp1.API\\MiniApp1.API.csproj",
+  "projectFilePath": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\MiniApp1.API\\MiniApp1.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sabit\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\sabit\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

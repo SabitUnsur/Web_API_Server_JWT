@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sabit\\source\\repos\\AuthService.API\\MiniApp3.API\\MiniApp3.API (NoUserData).csproj": {}
+    "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\MiniApp3.API\\MiniApp3.API (NoUserData).csproj": {}
   },
   "projects": {
-    "C:\\Users\\sabit\\source\\repos\\AuthService.API\\MiniApp3.API\\MiniApp3.API (NoUserData).csproj": {
+    "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\MiniApp3.API\\MiniApp3.API (NoUserData).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sabit\\source\\repos\\AuthService.API\\MiniApp3.API\\MiniApp3.API (NoUserData).csproj",
+        "projectUniqueName": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\MiniApp3.API\\MiniApp3.API (NoUserData).csproj",
         "projectName": "MiniApp3.API (NoUserData)",
-        "projectPath": "C:\\Users\\sabit\\source\\repos\\AuthService.API\\MiniApp3.API\\MiniApp3.API (NoUserData).csproj",
+        "projectPath": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\MiniApp3.API\\MiniApp3.API (NoUserData).csproj",
         "packagesPath": "C:\\Users\\sabit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sabit\\source\\repos\\AuthService.API\\MiniApp3.API\\obj\\",
+        "outputPath": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\MiniApp3.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sabit\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sabit\\source\\repos\\AuthService.API\\SharedLibrary\\SharedLibrary.csproj": {
-                "projectPath": "C:\\Users\\sabit\\source\\repos\\AuthService.API\\SharedLibrary\\SharedLibrary.csproj"
+              "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\SharedLibrary\\SharedLibrary.csproj": {
+                "projectPath": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\SharedLibrary\\SharedLibrary.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\sabit\\source\\repos\\AuthService.API\\SharedLibrary\\SharedLibrary.csproj": {
+    "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\SharedLibrary\\SharedLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sabit\\source\\repos\\AuthService.API\\SharedLibrary\\SharedLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\SharedLibrary\\SharedLibrary.csproj",
         "projectName": "SharedLibrary",
-        "projectPath": "C:\\Users\\sabit\\source\\repos\\AuthService.API\\SharedLibrary\\SharedLibrary.csproj",
+        "projectPath": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\SharedLibrary\\SharedLibrary.csproj",
         "packagesPath": "C:\\Users\\sabit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sabit\\source\\repos\\AuthService.API\\SharedLibrary\\obj\\",
+        "outputPath": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\SharedLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sabit\\AppData\\Roaming\\NuGet\\NuGet.Config",

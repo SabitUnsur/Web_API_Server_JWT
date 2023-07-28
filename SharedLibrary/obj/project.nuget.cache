@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h/QsiIMwgraGyy46VuoQ0jf1XxYp0mpx+uBYpdX6rhwqBqnx59HGgw6SQwzL/8oCehgMkNAWgNj7v5zJR9zmqw==",
+  "dgSpecHash": "Llc7mfR9nKOmC2weZx7oWODE2BvkqYvZqDATvHALOnSjnL3qQkGcrc7r27oez9W/kW/ndZuhEzbc0nORAHfCJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sabit\\source\\repos\\AuthService.API\\SharedLibrary\\SharedLibrary.csproj",
+  "projectFilePath": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\SharedLibrary\\SharedLibrary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
