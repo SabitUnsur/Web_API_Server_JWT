@@ -108,6 +108,32 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -167,6 +193,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -211,6 +243,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\AuthServer.Data\\AuthServer.Data.csproj": {
+                "projectPath": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\AuthServer.Data\\AuthServer.Data.csproj"
+              },
               "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\AuthServer.Service\\AuthServer.Service.csproj": {
                 "projectPath": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\AuthServer.Service\\AuthServer.Service.csproj"
               },

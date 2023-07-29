@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AuthServer.Core.Configuration
 {
+    //Entity veya dto değil. Üyelikle alakalı olmayan apilere gideceği için bu sınıf tasarlandı.
     public class Client
     {
         public string Id { get; set; }

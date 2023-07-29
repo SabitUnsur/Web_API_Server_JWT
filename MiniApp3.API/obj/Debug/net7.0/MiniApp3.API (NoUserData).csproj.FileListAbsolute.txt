@@ -33,3 +33,38 @@ C:\Users\sabit\source\repos\AuthService.API\MiniApp3.API\obj\Debug\net7.0\MiniAp
 C:\Users\sabit\source\repos\AuthService.API\MiniApp3.API\obj\Debug\net7.0\ref\MiniApp3.API (NoUserData).dll
 C:\Users\sabit\source\repos\AuthService.API\MiniApp3.API\bin\Debug\net7.0\SharedLibrary.dll
 C:\Users\sabit\source\repos\AuthService.API\MiniApp3.API\bin\Debug\net7.0\SharedLibrary.pdb
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\appsettings.json
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\MiniApp3.API (NoUserData).exe
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\MiniApp3.API (NoUserData).deps.json
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\MiniApp3.API (NoUserData).runtimeconfig.json
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\MiniApp3.API (NoUserData).dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\MiniApp3.API (NoUserData).pdb
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\SharedLibrary.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\bin\Debug\net7.0\SharedLibrary.pdb
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\MiniApp3.API (NoUserData).csproj.AssemblyReference.cache
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\MiniApp3.API (NoUserData).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\MiniApp3.API (NoUserData).AssemblyInfoInputs.cache
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\MiniApp3.API (NoUserData).AssemblyInfo.cs
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\MiniApp3.API (NoUserData).csproj.CoreCompileInputs.cache
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\MiniApp3.API (NoUserData).MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\MiniApp3.API (NoUserData).MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\staticwebassets\msbuild.MiniApp3.API (NoUserData).Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\staticwebassets\msbuild.build.MiniApp3.API (NoUserData).props
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MiniApp3.API (NoUserData).props
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MiniApp3.API (NoUserData).props
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\scopedcss\bundle\MiniApp3.API (NoUserData).styles.css
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\MiniApp3.API (NoUserData).csproj.CopyComplete
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\MiniApp3.API (NoUserData).dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\refint\MiniApp3.API (NoUserData).dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\MiniApp3.API (NoUserData).pdb
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\MiniApp3.API (NoUserData).genruntimeconfig.cache
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp3.API\obj\Debug\net7.0\ref\MiniApp3.API (NoUserData).dll
