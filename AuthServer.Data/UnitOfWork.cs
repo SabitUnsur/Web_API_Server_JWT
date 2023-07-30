@@ -1,9 +1,4 @@
 ﻿using AuthServer.Core.UnitOfWork;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AuthServer.Data
 {
@@ -23,7 +18,7 @@ namespace AuthServer.Data
 
         public async Task CommitAsync()
         {
-           await _appDbContext.SaveChangesAsync();
+            await _appDbContext.SaveChangesAsync();
         }
     }
 }

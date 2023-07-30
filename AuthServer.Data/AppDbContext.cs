@@ -2,12 +2,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AuthServer.Data
 {
@@ -31,7 +25,8 @@ namespace AuthServer.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql("Host=localhost;Database=AuthDb;Username=postgres;Password=123");
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
         }
     }
 }
- 

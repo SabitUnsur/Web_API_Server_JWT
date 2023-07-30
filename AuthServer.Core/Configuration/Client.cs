@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AuthServer.Core.Configuration
+﻿namespace AuthServer.Core.Configuration
 {
     //Entity veya dto değil. Üyelikle alakalı olmayan apilere gideceği için bu sınıf tasarlandı.
     public class Client
@@ -12,6 +6,6 @@ namespace AuthServer.Core.Configuration
         public string Id { get; set; }
         public string ClientSecret { get; set; }
 
-        public List<String> Audiences { get; set;} //Hangi Apiye erişeceği verisini tutmak için kullandık.
+        public List<String> Audiences { get; set; } //Hangi Apiye erişeceği verisini tutmak için kullandık.
     }
 }

@@ -3,15 +3,10 @@ using AuthServer.Core.Services;
 using AuthServer.Core.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using SharedLibrary.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AuthServer.Service.Services
-{
+{   //DATABASE ERİSİM İLE BİRLİKTE KAYIT ISLEMLERI
     public class GenericService<TEntity, TDto> : IGenericService<TEntity, TDto> where TEntity : class where TDto : class
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -28,8 +23,8 @@ namespace AuthServer.Service.Services
         {
             var newEntity = ObjectMapper.Mapper.Map<TEntity>(entity);
             await _genericRepository.AddAsync(newEntity);
-            await  _unitOfWork.CommitAsync();
-            var newDto= ObjectMapper.Mapper.Map<TDto>(newEntity);
+            await _unitOfWork.CommitAsync();
+            var newDto = ObjectMapper.Mapper.Map<TDto>(newEntity);
             return Response<TDto>.Success(newDto, 200);
         }
 
@@ -45,29 +40,29 @@ namespace AuthServer.Service.Services
 
             if (product == null)
             {
-                return Response<TDto>.Fail("Id not found", 404,true);
+                return Response<TDto>.Fail("Id not found", 404, true);
             }
 
             return Response<TDto>.Success(ObjectMapper.Mapper.Map<TDto>(product), 200);
         }
 
-        public async Task<Response<NoDataDto>> Remove(int  id)
+        public async Task<Response<NoDataDto>> Remove(int id)
         {
-          var isExistEntity = await _genericRepository.GetByIdAsync(id);
+            var isExistEntity = await _genericRepository.GetByIdAsync(id);
             if (isExistEntity == null) return Response<NoDataDto>.Fail("User not found!", 404, true);
             _genericRepository.Remove(isExistEntity);
             await _unitOfWork.CommitAsync();
             return Response<NoDataDto>.Success(204);
         }
 
-        public async Task<Response<NoDataDto>> Update(TDto entity,int id)
+        public async Task<Response<NoDataDto>> Update(TDto entity, int id)
         {
             var isExistEntity = await _genericRepository.GetByIdAsync(id);
             //Detached olarak isaretlendi cünkü Update metodunda da aynı Id' ye sahip dto nesnesi geleceği için 2 nesne memoryde modified olarak işaretlenire hata verir
             //dolayısıyla Detached kullanıldı.
             if (isExistEntity == null) return Response<NoDataDto>.Fail("User not found!", 404, true);
 
-            var updateEntity=ObjectMapper.Mapper.Map<TEntity>(entity);
+            var updateEntity = ObjectMapper.Mapper.Map<TEntity>(entity);
             _genericRepository.Update(updateEntity);
             await _unitOfWork.CommitAsync();
             return Response<NoDataDto>.Success(204);
@@ -75,7 +70,7 @@ namespace AuthServer.Service.Services
 
         public async Task<Response<IEnumerable<TDto>>> Where(Expression<Func<TEntity, bool>> expression)
         {
-            var list =  _genericRepository.Where(expression);
+            var list = _genericRepository.Where(expression);
             // list.Skip(5).Take(10); --> int page,pageSize alınırsa parametre olarak bu şekilde sayfalama yapılır.
             //await list.ToListAsync(); //Şimdi veritabanına yansıdı, önce filtreleme yapıldı. IQueryable budur.
             return Response<IEnumerable<TDto>>.Success(ObjectMapper.Mapper.Map<IEnumerable<TDto>>(await list.ToListAsync()), 200);

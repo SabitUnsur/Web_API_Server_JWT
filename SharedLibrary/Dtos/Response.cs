@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
 namespace SharedLibrary.Dtos
 {
@@ -17,25 +12,25 @@ namespace SharedLibrary.Dtos
 
         public ErrorDto Error { get; private set; }
 
-        public static Response<T> Success(T data,int statusCode)
+        public static Response<T> Success(T data, int statusCode)
         {
-            return new Response<T> { Data = data, StatusCode = statusCode , IsSuccessful=true };
+            return new Response<T> { Data = data, StatusCode = statusCode, IsSuccessful = true };
         }
 
         public static Response<T> Success(int statusCode)
         {
-            return new Response<T> { Data = default, StatusCode = statusCode , IsSuccessful=true };
+            return new Response<T> { Data = default, StatusCode = statusCode, IsSuccessful = true };
         }
 
         public static Response<T> Fail(ErrorDto errors, int statusCode) //Hata Listesi
-        {   
-            return new Response<T> { Error = errors, StatusCode = statusCode , IsSuccessful=false  };
+        {
+            return new Response<T> { Error = errors, StatusCode = statusCode, IsSuccessful = false };
         }
 
-        public static Response<T> Fail(string errorMessage, int statusCode , bool isShow) //Tek hata
+        public static Response<T> Fail(string errorMessage, int statusCode, bool isShow) //Tek hata
         {
-            var errorDto = new ErrorDto(errorMessage,isShow);
-            return new Response<T> { Error = errorDto, StatusCode = statusCode , IsSuccessful=false};
+            var errorDto = new ErrorDto(errorMessage, isShow);
+            return new Response<T> { Error = errorDto, StatusCode = statusCode, IsSuccessful = false };
         }
 
     }

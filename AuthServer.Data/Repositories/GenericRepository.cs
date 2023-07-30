@@ -1,15 +1,10 @@
 ﻿using AuthServer.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AuthServer.Data.Repossitories
-{
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class , new()
+{  //DATABASE ERISIM ISLEMLERI
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class, new()
     {
         private readonly AppDbContext _appDbContext;
         private readonly DbSet<TEntity> _dbSet;
@@ -22,7 +17,7 @@ namespace AuthServer.Data.Repossitories
 
         public async Task AddAsync(TEntity entity)
         {
-           await _dbSet.AddAsync(entity);
+            await _dbSet.AddAsync(entity);
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
@@ -33,7 +28,8 @@ namespace AuthServer.Data.Repossitories
         public async Task<TEntity> GetByIdAsync(int id)
         {
             var entity = await _dbSet.FindAsync(id);
-            if(entity != null){
+            if (entity != null)
+            {
                 _appDbContext.Entry(entity).State = EntityState.Detached; //Memoryde izlenmesin diye yazıldı.
             }
             return entity;
@@ -46,14 +42,14 @@ namespace AuthServer.Data.Repossitories
 
         public TEntity Update(TEntity entity)
         {
-            //_appDbContext.Entry(entity).State = EntityState.Modified; //Propertyde tek bir alan değiştirilse dahi tüm alanlar güncellenecek gibi işlem yapar, dolayısıyla dezavantajdır.
-           _appDbContext.Update(entity);
+            _appDbContext.Entry(entity).State = EntityState.Modified; //Propertyde tek bir alan değiştirilse dahi tüm alanlar güncellenecek gibi işlem yapar, dolayısıyla dezavantajdır.
+                                                                      // _dbSet.Update(entity);
             return entity;
         }
 
         public IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> expression)
         {
-            return _dbSet.Where(expression); //Önce filtreleme sonra veritabanından çekme yapar. ToList() dendiğidne çeker. 
+            return _dbSet.Where(expression); //Önce filtreleme sonra veritabanından çekme yapar. ToList() dendiğinde çeker. 
         }
     }
 }
