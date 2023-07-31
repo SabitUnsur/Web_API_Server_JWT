@@ -56,3 +56,11 @@ C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Micr
 C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Humanizer.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\System.CodeDom.dll

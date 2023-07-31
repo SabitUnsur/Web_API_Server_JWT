@@ -7,10 +7,13 @@ namespace AuthServer.Data
 {
     public class AppDbContext : IdentityDbContext<UserApp, IdentityRole, string>
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+       
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-        }
+            optionsBuilder.UseNpgsql("Host=localhost;Database=AuthDb;Username=postgres;Password=123");
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
+        }
         public DbSet<Product> Products { get; set; }
         public DbSet<UserRefreshToken> UserRefreshTokens { get; set; }
 
@@ -22,11 +25,5 @@ namespace AuthServer.Data
             base.OnModelCreating(builder);
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseNpgsql("Host=localhost;Database=AuthDb;Username=postgres;Password=123");
-            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-
-        }
     }
 }

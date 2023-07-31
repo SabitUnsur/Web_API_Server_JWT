@@ -97,7 +97,6 @@ namespace AuthServer.Service.Services
                 AccesTokenExpiration = accessTokenExpiration,
                 RefreshTokenExpiration = refreshTokenExpiration
             };
-
             return tokenDto;
         }
 

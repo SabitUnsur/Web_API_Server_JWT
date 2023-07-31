@@ -25,3 +25,5 @@ C:\Users\sabit\source\repos\AuthServer.API\AuthServer.Core\obj\Debug\net7.0\Auth
 C:\Users\sabit\source\repos\AuthServer.API\AuthServer.Core\obj\Debug\net7.0\refint\AuthServer.Core.dll
 C:\Users\sabit\source\repos\AuthServer.API\AuthServer.Core\obj\Debug\net7.0\AuthServer.Core.pdb
 C:\Users\sabit\source\repos\AuthServer.API\AuthServer.Core\obj\Debug\net7.0\ref\AuthServer.Core.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthServer.Core\bin\Debug\net7.0\AuthServer.Core.runtimeconfig.json
+C:\Users\sabit\source\repos\AuthServer.API\AuthServer.Core\obj\Debug\net7.0\AuthServer.Core.genruntimeconfig.cache

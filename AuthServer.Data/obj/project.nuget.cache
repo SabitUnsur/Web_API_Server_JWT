@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Z16c0OWXYQZHIYJ/+g3TNp2mr22xoJntL4vPK3gO4GJYp5s95jiowozUiyqM5tZEqIjURFTSpWXmDfF+VmRIcQ==",
+  "dgSpecHash": "5WynOvRRVxaDoq1xeUq6WJBzcCi7FeZS0hGcVMbx5d+4FitPeJ7UXDUQVOeOtEEym0reS5Xpganm1lkJRVRpkg==",
   "success": true,
   "projectFilePath": "C:\\Users\\sabit\\source\\repos\\AuthServer.API\\AuthServer.Data\\AuthServer.Data.csproj",
   "expectedPackageFiles": [
