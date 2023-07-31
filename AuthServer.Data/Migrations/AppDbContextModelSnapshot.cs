@@ -59,7 +59,6 @@ namespace AuthServer.Data.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("City")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 

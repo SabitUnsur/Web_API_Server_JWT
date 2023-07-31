@@ -73,11 +73,9 @@ namespace AuthServer.Service.Services
         {
             var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpiration); //access süresi
             var refreshTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.RefreshTokenExpiration);
-
             var securityKey = SignService.GetSymmetricSecurityKey(_tokenOption.SecurityKey); //imzalanmıs token
-
-            SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature); //Şifrelendi.
-            //SigningCredentials --> Token oluşturulurken, istenirken bu credentials üstünden isteniyor.
+            SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature.ToString()); //Şifrelendi.
+            //SigningCredentials => Token oluşturulurken, istenirken bu credentials üstünden isteniyor.
 
             JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(
               issuer: _tokenOption.Issuer,
@@ -97,12 +95,13 @@ namespace AuthServer.Service.Services
                 AccesTokenExpiration = accessTokenExpiration,
                 RefreshTokenExpiration = refreshTokenExpiration
             };
+
             return tokenDto;
         }
 
         public ClientTokenDto CreateTokenByClient(Client client)
         {
-            var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpiration); 
+            var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpiration);
             var securityKey = SignService.GetSymmetricSecurityKey(_tokenOption.SecurityKey); 
             SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature); 
 
