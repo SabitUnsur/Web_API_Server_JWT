@@ -6,10 +6,14 @@ using AuthServer.Core.UnitOfWork;
 using AuthServer.Data;
 using AuthServer.Data.Repossitories;
 using AuthServer.Service.Services;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using SharedLibrary.Configurations;
+using SharedLibrary.Services;
 using System.Globalization;
+using SharedLibrary.Extension;
+using Microsoft.AspNetCore.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,6 +58,16 @@ builder.Services.AddAuthentication(opt =>
     };
 });
 
+builder.Services.AddFluentValidation(options =>
+{
+    options.RegisterValidatorsFromAssemblyContaining<Program>();
+});
+
+builder.Services.AddControllers().AddFluentValidation(options =>
+{
+    options.RegisterValidatorsFromAssemblyContaining<Program>();
+});  //kendi yazdýðýmýz extension
+
 builder.Services.Configure<CustomTokenOption>(builder.Configuration.GetSection("TokenOption"));
 //Class ve appsetings.jsonu baðladýk, DI Containera bir nesne örneði geçtik. 
 
@@ -79,6 +93,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCustomException(); //kendi middlewaremiz 
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

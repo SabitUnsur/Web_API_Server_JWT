@@ -1,11 +1,13 @@
 ﻿using AuthServer.Core.Dtos;
 using AuthServer.Core.Entity;
 using AuthServer.Core.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthServer.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : CustomBaseController
@@ -35,7 +37,7 @@ namespace AuthServer.API.Controllers
             return ActionResultInstance(await _service.Update(productDto,productDto.Id));
         }
 
-        [HttpPut]
+        [HttpDelete("{Id}")]
         public async Task<IActionResult> DeleteProduct(int Id)
         {
             return ActionResultInstance(await _service.Remove(Id));

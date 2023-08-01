@@ -14,6 +14,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using SharedLibrary.Services;
 
 namespace AuthServer.Service.Services
 {
@@ -61,6 +62,7 @@ namespace AuthServer.Service.Services
 
         private IEnumerable<Claim> GetClaimsByClient(Client client)
         {
+            //Üyelik içermeyen bilgileri payloadda tutan token tipi.
             var claims = new List<Claim>();
             claims.AddRange(client.Audiences.Select(x => new Claim(JwtRegisteredClaimNames.Aud, x)));
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString());

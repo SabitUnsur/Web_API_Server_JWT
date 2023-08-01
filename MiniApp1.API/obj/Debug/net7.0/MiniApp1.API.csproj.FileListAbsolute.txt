@@ -68,3 +68,10 @@ C:\Users\sabit\source\repos\AuthServer.API\MiniApp1.API\obj\Debug\net7.0\refint\
 C:\Users\sabit\source\repos\AuthServer.API\MiniApp1.API\obj\Debug\net7.0\MiniApp1.API.pdb
 C:\Users\sabit\source\repos\AuthServer.API\MiniApp1.API\obj\Debug\net7.0\MiniApp1.API.genruntimeconfig.cache
 C:\Users\sabit\source\repos\AuthServer.API\MiniApp1.API\obj\Debug\net7.0\ref\MiniApp1.API.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp1.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp1.API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp1.API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp1.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp1.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp1.API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sabit\source\repos\AuthServer.API\MiniApp1.API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

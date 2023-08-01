@@ -64,3 +64,6 @@ C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Micr
 C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+C:\Users\sabit\source\repos\AuthServer.API\AuthService.API\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
