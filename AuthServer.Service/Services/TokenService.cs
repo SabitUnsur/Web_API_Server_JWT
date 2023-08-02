@@ -25,7 +25,7 @@ namespace AuthServer.Service.Services
         private readonly CustomTokenOption _tokenOption;
 
 
-        public TokenService(UserManager<UserApp> userManager,IOptions<CustomTokenOption> options)
+        public TokenService(UserManager<UserApp> userManager, IOptions<CustomTokenOption> options)
         {
             _userManager = userManager;
             _tokenOption = options.Value;
@@ -37,15 +37,25 @@ namespace AuthServer.Service.Services
             var numberByte = new Byte[32]; //kaç bytlelık bir string değer üreteceğiz.
             using var random = RandomNumberGenerator.Create();
             random.GetBytes(numberByte); //randomdan değerleri alıp numberbyte değerine aktardı.
-            return Convert.ToBase64String(numberByte); 
+            return Convert.ToBase64String(numberByte);
 
             //32 bytelık random bir string ifade oluştu.
             //Bu class sadece bu sısnıf içerisinde kullanılacak.
         }
 
-        private async Task<IEnumerable<Claim>> GetClaims(UserApp userApp,List<String> audiences) 
-            //kullanıcı ve hangi apiye istek gideceğiyle alakalı bilgiler tuttuk.
-            //Token Payloadında bu bilgiler olacak.
+        //kullanıcı ve hangi apiye istek gideceğiyle alakalı bilgiler tuttuk.
+        //Token Payloadında bu bilgiler olacak.
+        /*
+new Claim(ClaimTypes.Role, userRoles) kodu hata veriyor çünkü userRoles değişkeni bir liste (List<string>) olduğu 
+için doğrudan bir Claim nesnesine atanamaz. Claim sınıfının ikinci parametresi olan value parametresi,
+bir dize (string) değeri alırken, userRoles değişkeni bir liste olduğu için bu atama yapılamaz.
+Bu nedenle, userRoles listesindeki her bir rolü ayrı ayrı Claim nesneleri olarak oluşturmak 
+ve bunları userList listesine eklemek gerekmektedir.
+Bu işlem, userRoles.Select(x => new Claim(ClaimTypes.Role, x)) koduyla gerçekleştirilir. 
+Bu kod parçası, userRoles listesindeki her bir rol için ayrı bir Claim nesnesi oluşturur
+ve bunları userList listesine ekler.*/
+
+        private async Task<IEnumerable<Claim>> GetClaims(UserApp userApp, List<String> audiences)
         {
             var userRoles = await _userManager.GetRolesAsync(userApp);
             // ["admin","manager"]
@@ -56,7 +66,7 @@ namespace AuthServer.Service.Services
             new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()), //random tokenID'si olsun.
             new Claim("City",userApp.City), //Claim-Based authorization
             new Claim("Birthday",userApp.Birthday.ToString()) //Policy-Based authorization
-            };
+};
 
             userList.AddRange(audiences.Select(x => new Claim(JwtRegisteredClaimNames.Aud, x)));
             //Burada ise audiencestan gelecek yani apiler gelen tokenın .Aud() diyerek iznine bakacak ve eğer varsa claims olarak eklenecek. 
@@ -81,7 +91,7 @@ namespace AuthServer.Service.Services
             var refreshTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.RefreshTokenExpiration);
             var securityKey = SignService.GetSymmetricSecurityKey(_tokenOption.SecurityKey); //imzalanmıs token
             SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature.ToString()); //Şifrelendi.
-            //SigningCredentials => Token oluşturulurken, istenirken bu credentials üstünden isteniyor.
+                                                                                                                                            //SigningCredentials => Token oluşturulurken, istenirken bu credentials üstünden isteniyor.
 
             JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(
               issuer: _tokenOption.Issuer,
@@ -108,8 +118,8 @@ namespace AuthServer.Service.Services
         public ClientTokenDto CreateTokenByClient(Client client)
         {
             var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpiration);
-            var securityKey = SignService.GetSymmetricSecurityKey(_tokenOption.SecurityKey); 
-            SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature); 
+            var securityKey = SignService.GetSymmetricSecurityKey(_tokenOption.SecurityKey);
+            SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
 
             JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(
               issuer: _tokenOption.Issuer,
@@ -124,12 +134,12 @@ namespace AuthServer.Service.Services
 
             var clientTokenDto = new ClientTokenDto
             {
-                AccessToken = token,       
+                AccessToken = token,
                 AccesTokenExpiration = accessTokenExpiration,
             };
 
             return clientTokenDto;
         }
     }
-    
+
 }
