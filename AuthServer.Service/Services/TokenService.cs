@@ -43,20 +43,24 @@ namespace AuthServer.Service.Services
             //Bu class sadece bu sısnıf içerisinde kullanılacak.
         }
 
-        private IEnumerable<Claim> GetClaims(UserApp userApp,List<String> audiences) 
+        private async Task<IEnumerable<Claim>> GetClaims(UserApp userApp,List<String> audiences) 
             //kullanıcı ve hangi apiye istek gideceğiyle alakalı bilgiler tuttuk.
             //Token Payloadında bu bilgiler olacak.
         {
+            var userRoles = await _userManager.GetRolesAsync(userApp);
+            // ["admin","manager"]
             var userList = new List<Claim> {
             new Claim(ClaimTypes.NameIdentifier,userApp.Id),
             new Claim(JwtRegisteredClaimNames.Email,userApp.Email),
             new Claim(ClaimTypes.Name,userApp.UserName),
-            new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()) //random tokenID'si olsun.
+            new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()), //random tokenID'si olsun.
+            new Claim("City",userApp.City), //Claim-Based authorization
+            new Claim("Birthday",userApp.Birthday.ToString()) //Policy-Based authorization
             };
 
             userList.AddRange(audiences.Select(x => new Claim(JwtRegisteredClaimNames.Aud, x)));
             //Burada ise audiencestan gelecek yani apiler gelen tokenın .Aud() diyerek iznine bakacak ve eğer varsa claims olarak eklenecek. 
-
+            userList.AddRange(userRoles.Select(x => new Claim(ClaimTypes.Role, x)));
             return userList;
         }
 
@@ -83,7 +87,7 @@ namespace AuthServer.Service.Services
               issuer: _tokenOption.Issuer,
               expires: accessTokenExpiration,
               notBefore: DateTime.Now,
-              claims: GetClaims(userApp, _tokenOption.Audience),
+              claims: GetClaims(userApp, _tokenOption.Audience).Result,
               signingCredentials: signingCredentials);
 
 

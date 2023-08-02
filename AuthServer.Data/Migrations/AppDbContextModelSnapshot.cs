@@ -58,6 +58,9 @@ namespace AuthServer.Data.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("integer");
 
+                    b.Property<DateTime?>("Birthday")
+                        .HasColumnType("timestamp without time zone");
+
                     b.Property<string>("City")
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");

@@ -5,5 +5,6 @@ namespace AuthServer.Core.Entity
     public class UserApp : IdentityUser
     {
         public string? City { get; set; }
+        public DateTime? Birthday { get; set; }
     }
 }
